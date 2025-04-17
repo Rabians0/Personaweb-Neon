@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .hero-content p {
+    line-height: 75%;
+  }
+  
+  /* ===== Header ===== */
+  header {
+    background: #111;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #00ffff;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #00ffff;
+  }
+  
+  /* ===== Hero Section ===== */
+  .hero {
+    position: relative;
+    background-color: #0f0f1a;
+    padding: 90px 20px; /* 1.5x do padding original (60px) */
+    overflow: visible;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding-top: 20px;
+    min-height: 450px; /* 1.5x do min-height original (300px) */
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+    color: #00ffff;
+    text-shadow: 2px 2px #000;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px #000;
+    max-width: 88%;
+    line-height: 20px;
+  }
+  
+  .hero .neon-img {
+    position: absolute;
+    top: -30px;
+    bottom: -30px;
+    padding-right: 20px;
+    right: 0;
+    height: 500px; /* 1.5x da altura original e 30px para cima e para baixo */
+    z-index: 0;
+  }
+  /* ===== Seções Gerais ===== */
+  section {
+    padding: 60px 0;
+  }
+  
+  .sobre,
+  .habilidades {
+    background-color: #1a1a1a;
+  }
+  
+  h3 {
+    font-size: 32px;
+    color: #00ffff;
+    margin-bottom: 20px;
+  }
+  
+  p.desc {
+    padding-top: 20px;
+    white-space: normal
+  }
+
+  .sobre h2{
+    color:#00ccff;
+    font-size: large;
+  }
+
+  h4 {
+    font-size: 24px;
+    color: #00ccff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #aaa;
+    font-size: 14px;
+  }
+
+  .hero h1{
+    font-size: 50px;
+    color:#00ffff;
+  }
+  
