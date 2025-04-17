@@ -15,14 +15,111 @@
     </nav>
   </header>
 
-  <section class="habilidades" id="habilidades">
-    <h2>Habilidades</h2>
-    <ul>
-      <li><strong>Fast Lane:</strong> Cria duas paredes de eletricidade que bloqueiam a visão e causam dano a inimigos que as tocarem.</li>
-      <li><strong>Relay Bolt:</strong> Lança um projétil que ricocheteia e emite uma explosão elétrica que atordoa os inimigos.</li>
-      <li><strong>High Gear:</strong> Neon corre em alta velocidade. Pode deslizar uma vez, resetando após dois abates.</li>
-      <li><strong>Overdrive (Ultimate):</strong> Dispara um feixe de energia mortal com precisão e velocidade enquanto corre.</li>
-    </ul>
-  </section>
+  <!-- HTML -->
+<section class="secao-habilidades">
+  <header class="cabecalho-habilidades">
+    <h2>Habilidades Especiais</h2>
+  </header>
+
+  <div class="carrossel-habilidades" role="region" aria-label="Carrossel de habilidades">
+    <ol class="lista-icones">
+      <li class="icone-item" onclick="mostrarSlide(0)">
+        <img src="icone1.png" alt="Habilidade 1">
+      </li>
+      <li class="icone-item" onclick="mostrarSlide(1)">
+        <img src="icone2.png" alt="Habilidade 2">
+      </li>
+      <li class="icone-item" onclick="mostrarSlide(2)">
+        <img src="icone3.png" alt="Habilidade 3">
+      </li>
+      <li class="icone-item" onclick="mostrarSlide(3)">
+        <img src="icone4.png" alt="Habilidade 4">
+      </li>
+    </ol>
+
+    <div class="slides-habilidades">
+      <div class="slide" id="slide-0">
+        <div class="conteudo-slide">
+          <div class="texto-habilidade">
+            <h3 class="titulo-habilidade">RICOCHETE ELÉTRICO</h3>
+            <p class="descricao-habilidade">
+              INSTANTANEAMENTE arremessa um raio de energia que ricocheteia uma vez. Ao atingir cada superfície, o raio eletrifica o chão abaixo dele com uma explosão.
+            </p>
+          </div>
+          <div class="video-habilidade">
+            <video id="video-0" controls>
+              <source src="video1.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-1" style="display:none">
+        <div class="conteudo-slide">
+          <div class="texto-habilidade">
+            <h3 class="titulo-habilidade">Habilidade 2</h3>
+            <p class="descricao-habilidade">Mesmo texto para o slide 2.</p>
+          </div>
+          <div class="video-habilidade">
+            <video id="video-1" controls>
+              <source src="video2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-2" style="display:none">
+        <div class="conteudo-slide">
+          <div class="texto-habilidade">
+            <h3 class="titulo-habilidade">Habilidade 3</h3>
+            <p class="descricao-habilidade">Mesmo texto para o slide 3.</p>
+          </div>
+          <div class="video-habilidade">
+            <video id="video-2" controls>
+              <source src="video3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-3" style="display:none">
+        <div class="conteudo-slide">
+          <div class="texto-habilidade">
+            <h3 class="titulo-habilidade">Habilidade 4</h3>
+            <p class="descricao-habilidade">Mesmo texto para o slide 4.</p>
+          </div>
+          <div class="video-habilidade">
+            <video id="video-3" controls>
+              <source src="video4.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <script>
+    function mostrarSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  const videos = document.querySelectorAll('video');
+
+  slides.forEach((slide, i) => {
+    const isActive = i === index;
+    slide.style.display = isActive ? 'block' : 'none';
+
+    if (isActive) {
+      videos[i].play();
+    } else {
+      videos[i].pause();
+      videos[i].currentTime = 0;
+    }
+  });
+}
+
+  </script>
+  
 </body>
 </html>
